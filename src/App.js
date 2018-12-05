@@ -2,11 +2,15 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 // import WebSocket from './WebSocket' <WebSocket />
-import Socket from './Socket'
+
 
 import loremIpsum from 'lorem-ipsum';
 
 import { List } from "react-virtualized";
+import Socket from './Socket'
+import  SimpleLineChart  from './Graph';
+import Frames from './Frames'
+{/* <SimpleLineChart /> */}
 
 const rowCount = 1000;
 const listHeight = 600;
@@ -51,10 +55,20 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Blinds</h1>
+          <h1 className="App-title ">Blinds</h1>
         </header>
-
+        <SimpleLineChart />
+        <div id="example1"></div>
+        <div id="example2"></div>
+        <Frames />
+        <Frames />
+        <Frames />
+        <Frames />
+        <Frames />
+        <Frames />
+        <div className="clearfix"></div>
         <Socket />
+
         <div className="list">
           <List
             width={rowWidth}
